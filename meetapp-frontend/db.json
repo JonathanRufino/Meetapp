@@ -1,0 +1,66 @@
+{
+  "sessions": {
+    "user": {
+      "id": 1,
+      "name": "Usuário Teste",
+      "email": "teste@meetapp.com"
+    },
+    "token": "abcdefghijklmnopqrstuvwxyz"
+  },
+  "organizing": [
+    {
+      "id": 1,
+      "title": "Node.js",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "location": "Centro de Convenções - Brasília",
+      "date": "2019-09-17 07:27:05.383 +00:00",
+      "createdAt": "2019-12-05T22:51:15.995Z",
+      "updatedAt": "2019-12-05T22:51:15.995Z",
+      "user": {
+        "id": 1,
+        "name": "Jonathan Rufino",
+        "email": "rufino@meetapp.com"
+      },
+      "banner": {
+        "url": "https://images.unsplash.com/photo-1543959106-6a907a6b50cf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80",
+        "id": 2
+      }
+    },
+    {
+      "id": 2,
+      "title": "ReactJS",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "location": "Centro de Convenções - Brasília",
+      "date": "2019-09-17 07:27:05.383 +00:00",
+      "createdAt": "2019-12-10T22:51:15.995Z",
+      "updatedAt": "2019-12-10T22:51:15.995Z",
+      "user": {
+        "id": 1,
+        "name": "Jonathan Rufino",
+        "email": "rufino@meetapp.com"
+      },
+      "banner": {
+        "url": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
+        "id": 2
+      }
+    },
+    {
+      "id": 3,
+      "title": "React Native",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "location": "Centro de Convenções - Brasília",
+      "date": "2019-09-17 07:27:05.383 +00:00",
+      "createdAt": "2019-12-15T22:51:15.995Z",
+      "updatedAt": "2019-12-15T22:51:15.995Z",
+      "user": {
+        "id": 1,
+        "name": "Jonathan Rufino",
+        "email": "rufino@meetapp.com"
+      },
+      "banner": {
+        "url": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
+        "id": 3
+      }
+    }
+  ]
+}

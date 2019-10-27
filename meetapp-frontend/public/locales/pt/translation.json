@@ -1,0 +1,67 @@
+{
+  "button": {
+    "signOut": "Sair",
+    "newMeetup": "Novo meetup",
+    "edit": "Editar",
+    "cancel": "Cancelar",
+    "saveMeetup": "Salvar meetup",
+    "saveProfile": "Salvar perfil",
+    "signIn": "Entrar",
+    "createAccount": "Criar conta",
+    "previous": "Anterior",
+    "next": "Próxima"
+  },
+  "link": {
+    "myProfile": "Meu perfil",
+    "createNewAccount": "Criar conta grátis",
+    "hasAccount": "Já tenho login"
+  },
+  "header": {
+    "myMeetups": "Meus meetups"
+  },
+  "placeholder": {
+    "meetupTitle": "Título do Meetup",
+    "meetupDescription": "Descrição completa",
+    "meetupDate": "Data do meetup",
+    "meetupLocation": "Localização",
+    "userName": "Nome completo",
+    "email": "Endereço de e-mail",
+    "password": "Senha atual",
+    "newPassword": "Nova senha",
+    "confirmPassword": "Confirmação de senha",
+    "signEmail": "Digite seu e-mail",
+    "signPassword": "Sua senha secreta",
+    "signName": "Nome completo"
+  },
+  "state": {
+    "saving": "Salvando...",
+    "loading": "Carregando...",
+    "cancelling": "Cancelando..."
+  },
+  "error": {
+    "empty": {
+      "meetupBanner": "Adicione uma imagem do seu meetup",
+      "meetupTitle": "Insira o título do meetup",
+      "meetupDescription": "Descreva o seu meetup",
+      "meetupLocation": "Insira o local onde será realizado o meetup",
+      "meetupDate": "Insira a data em que o meetup acontecerá",
+      "userName": "Informe seu nome",
+      "email": "Informe seu endereço de e-mail",
+      "newPassword": "Informe sua nova senha",
+      "confirmPassword": "Confirme sua nova senha",
+      "signEmail": "O e-mail é obrigatório",
+      "signPassword": "A senha é obrigatória",
+      "signName": "O nome é obrigatório"
+    },
+    "invalid": {
+      "date": "Insira uma data válida",
+      "email": "Insira um e-mail válido",
+      "passwordDontMatch": "As senhas não conferem"
+    },
+    "length": {
+      "password": {
+        "min": "No mínimo 6 caracteres"
+      }
+    }
+  }
+}

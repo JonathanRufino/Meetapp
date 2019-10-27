@@ -1,0 +1,72 @@
+{
+  "button": {
+    "signIn": "Entrar",
+    "signUp": "Criar conta",
+    "cancelSubscription": "Cancelar inscrição",
+    "saveProfile": "Salvar perfil",
+    "signOut": "Sair do Meetapp",
+    "subscribe": "Realizar inscrição"
+  },
+  "link": {
+    "createAccount": "Criar conta grátis",
+    "alreadyHaveAccount": "Já tenho login"
+  },
+  "label": {
+    "organizer": "Organizador: {{name}}"
+  },
+  "placeholder": {
+    "email": "Digite seu e-mail",
+    "password": "Sua senha secreta",
+    "name": "Nome completo",
+    "currentPassword": "Senha atual",
+    "newPassword": "Nova senha",
+    "confirmPassword": "Confirmação de senha"
+  },
+  "state": {
+    "processing": "Processando..."
+  },
+  "success": {
+    "updateProfile": {
+      "title": "Sucesso!",
+      "description": "Perfil atualizado com sucesso"
+    },
+    "subscribe": {
+      "title": "Sucesso!",
+      "description": "Inscrição realizada com sucesso."
+    },
+    "cancelSubscription": {
+      "title": "Inscrição cancelada",
+      "description": "É uma pena que você não participará desse evento."
+    }
+  },
+  "error": {
+    "empty": {
+    },
+    "invalid": {
+    },
+    "signIp": "Falha na autenticação",
+    "signUp": "Falha no cadastro",
+    "subscription": "Erro na inscrição",
+    "cancelSubscription": "Erro ao cancelar inscrição",
+    "updateProfile": "Falha na atualização"
+  },
+  "tab": {
+    "meetups": "Meetups",
+    "subscriptions": "Inscrições",
+    "profile": "Meu perfil"
+  },
+  "empty": {
+    "default": {
+      "title": "Vazio por aqui não é mesmo?",
+      "description": "Não encontramos o que você estava procurando. Mas fique à vontade de continue olhando por aí. :)"
+    },
+    "subscriptions": {
+      "title": "Você ainda não se inscreveu em nenhum meetup",
+      "description": "Que tal participar de diversos eventos e, além de aprender muita coisa, conhecer diversas pessoas legais?"
+    },
+    "meetups": {
+      "title": "Não existem meetups nessa data",
+      "description": "Pesquise por outras datas, com certeza você encontrará um evento super legal."
+    }
+  }
+}

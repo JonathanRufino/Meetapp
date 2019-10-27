@@ -1,0 +1,46 @@
+import Sequelize, { Model } from 'sequelize';
+import bcrypt from 'bcryptjs';
+
+// /**
+//  * @swagger
+//  *
+//  * definitions:
+//  *  User:
+//  *    type: object
+//  *    properties:
+//  *      name:
+//  *        type: string
+//  *      email:
+//  *        type: string
+//  *      password_hash:
+//  *        type: string
+//  */
+class User extends Model {
+  static init(sequelize) {
+    super.init(
+      {
+        name: Sequelize.STRING,
+        email: Sequelize.STRING,
+        password_hash: Sequelize.STRING,
+        password: Sequelize.VIRTUAL,
+      },
+      {
+        sequelize,
+      }
+    );
+
+    this.addHook('beforeSave', async user => {
+      if (user.password) {
+        user.password_hash = await bcrypt.hash(user.password, 8);
+      }
+    });
+
+    return this;
+  }
+
+  checkPassword(password) {
+    return bcrypt.compare(password, this.password_hash);
+  }
+}
+
+export default User;
