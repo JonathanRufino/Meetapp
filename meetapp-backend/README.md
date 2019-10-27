@@ -5,7 +5,7 @@
 
 > Backend module for the Rocketseat&#39;s Bootcamp challenge
 
-## Install
+## Install dependencies
 
 ```sh
 yarn
@@ -13,9 +13,25 @@ yarn
 
 ## Usage
 
-```sh
-docker-compose up
-```
+1. Rename the `.env.example` file to `.env`, or create a `.env` file, and fill it with your own credentials if necessary
+
+2. Start containers
+
+    `docker-compose up`
+
+3. Create the database
+
+    ```bash
+    docker exec -it <postgres_container_id> psql -U postgres -c "create database meetapp"
+    ```
+
+4. Create database tables
+
+    ```bash
+    yarn sequelize db:migrate
+    ```
+
+5. You can access the application Swagger Docs on [http://localhost:3333/api-docs/](http://localhost:3333/api-docs/)
 
 ## Run tests
 
