@@ -8,7 +8,7 @@ export const DateControl = styled.View`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 10px;
 `;
 
 export const DateButton = styled.TouchableOpacity``;
@@ -26,7 +26,7 @@ export const MeetupsList = styled.FlatList.attrs({
     paddingHorizontal: 20,
   },
 })`
-  margin-top: 30px;
+  margin-top: 15px;
 `;
 
 export const Loading = styled.ActivityIndicator.attrs({
