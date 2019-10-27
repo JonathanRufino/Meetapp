@@ -2,11 +2,10 @@ import { all, put, call, takeLatest } from 'redux-saga/effects';
 import { toast } from 'react-toastify';
 
 import api from '~/services/api';
-import {
-  updateProfileSuccess,
-  updateProfileFailure,
-} from '~/store/modules/user/actions';
 import i18n from '~/config/i18n';
+
+import { updateProfileSuccess, updateProfileFailure } from './actions';
+import UserTypes from './types';
 
 export function* updateProfile({ payload }) {
   try {
@@ -29,4 +28,6 @@ export function* updateProfile({ payload }) {
   }
 }
 
-export default all([takeLatest('@user/UPDATE_PROFILE_REQUEST', updateProfile)]);
+export default all([
+  takeLatest(UserTypes.UPDATE_PROFILE_REQUEST, updateProfile),
+]);
