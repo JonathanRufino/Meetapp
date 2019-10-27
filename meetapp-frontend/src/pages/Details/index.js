@@ -29,7 +29,7 @@ function Details({ location }) {
         <div>
           <Link
             to={{
-              pathname: `/edit/${meetup.id}`,
+              pathname: `/meetup/${meetup.id}/edit`,
               state: { meetup },
             }}
           >
