@@ -6,6 +6,7 @@ import history from '~/services/history';
 import i18n from '~/config/i18n';
 
 import { signInSuccess, signFailure } from './actions';
+import AuthTypes from './types';
 
 export function* signIn({ payload }) {
   try {
@@ -65,7 +66,7 @@ export function signOut() {
 
 export default all([
   takeLatest('persist/REHYDRATE', setToken),
-  takeLatest('@auth/SIGN_IN_REQUEST', signIn),
-  takeLatest('@auth/SIGN_UP_REQUEST', signUp),
-  takeLatest('@auth/SIGN_OUT', signOut),
+  takeLatest(AuthTypes.SIGN_IN_REQUEST, signIn),
+  takeLatest(AuthTypes.SIGN_UP_REQUEST, signUp),
+  takeLatest(AuthTypes.SIGN_OUT, signOut),
 ]);
