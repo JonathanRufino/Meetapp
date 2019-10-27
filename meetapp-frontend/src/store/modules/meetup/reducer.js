@@ -1,5 +1,9 @@
 import produce from 'immer';
 
+import AuthTypes from '~/store/modules/auth/types';
+
+import MeetupTypes from './types';
+
 const INITIAL_STATE = {
   meetup: null,
   loading: false,
@@ -8,43 +12,43 @@ const INITIAL_STATE = {
 function meetup(state = INITIAL_STATE, action) {
   return produce(state, draft => {
     switch (action.type) {
-      case '@auth/SIGN_OUT': {
+      case AuthTypes.SIGN_OUT: {
         draft.meetup = null;
         break;
       }
-      case '@meetup/CREATE_MEETUP_REQUEST': {
+      case MeetupTypes.CREATE_MEETUP_REQUEST: {
         draft.loading = true;
         break;
       }
-      case '@meetup/CREATE_MEETUP_SUCCESS': {
+      case MeetupTypes.CREATE_MEETUP_SUCCESS: {
         draft.loading = false;
         break;
       }
-      case '@meetup/CREATE_MEETUP_FAILURE': {
+      case MeetupTypes.CREATE_MEETUP_FAILURE: {
         draft.loading = false;
         break;
       }
-      case '@meetup/UPDATE_MEETUP_REQUEST': {
+      case MeetupTypes.UPDATE_MEETUP_REQUEST: {
         draft.loading = true;
         break;
       }
-      case '@meetup/UPDATE_MEETUP_SUCCESS': {
+      case MeetupTypes.UPDATE_MEETUP_SUCCESS: {
         draft.loading = false;
         break;
       }
-      case '@meetup/UPDATE_MEETUP_FAILURE': {
+      case MeetupTypes.UPDATE_MEETUP_FAILURE: {
         draft.loading = false;
         break;
       }
-      case '@meetup/CANCEL_MEETUP_REQUEST': {
+      case MeetupTypes.CANCEL_MEETUP_REQUEST: {
         draft.loading = true;
         break;
       }
-      case '@meetup/CANCEL_MEETUP_SUCCESS': {
+      case MeetupTypes.CANCEL_MEETUP_SUCCESS: {
         draft.loading = false;
         break;
       }
-      case '@meetup/CANCEL_MEETUP_FAILURE': {
+      case MeetupTypes.CANCEL_MEETUP_FAILURE: {
         draft.loading = false;
         break;
       }

@@ -3,6 +3,8 @@ import { toast } from 'react-toastify';
 
 import api from '~/services/api';
 import history from '~/services/history';
+import i18n from '~/config/i18n';
+
 import {
   createMeetupSuccess,
   createMeetupFailure,
@@ -10,8 +12,8 @@ import {
   updateMeetupFailure,
   cancelMeetupSuccess,
   cancelMeetupFailure,
-} from '~/store/modules/meetup/actions';
-import i18n from '~/config/i18n';
+} from './actions';
+import MeetupTypes from './types';
 
 export function* createMeetup({ payload }) {
   try {
@@ -63,7 +65,7 @@ export function* cancelMeetup({ payload }) {
 }
 
 export default all([
-  takeLatest('@meetup/CREATE_MEETUP_REQUEST', createMeetup),
-  takeLatest('@meetup/UPDATE_MEETUP_REQUEST', updateMeetup),
-  takeLatest('@meetup/CANCEL_MEETUP_REQUEST', cancelMeetup),
+  takeLatest(MeetupTypes.CREATE_MEETUP_REQUEST, createMeetup),
+  takeLatest(MeetupTypes.UPDATE_MEETUP_REQUEST, updateMeetup),
+  takeLatest(MeetupTypes.CANCEL_MEETUP_REQUEST, cancelMeetup),
 ]);
