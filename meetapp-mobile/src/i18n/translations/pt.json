@@ -44,7 +44,7 @@
     },
     "invalid": {
     },
-    "signIp": "Falha na autenticação",
+    "signIn": "Falha na autenticação",
     "signUp": "Falha no cadastro",
     "subscription": "Erro na inscrição",
     "cancelSubscription": "Erro ao cancelar inscrição",
