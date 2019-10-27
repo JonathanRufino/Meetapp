@@ -47,6 +47,16 @@ export const Container = styled.div`
       }
     }
 
+    .react-datepicker__input-container {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+
+      input {
+        width: 100%;
+      }
+    }
+
     span {
       color: #fb6f91;
       align-self: flex-start;
