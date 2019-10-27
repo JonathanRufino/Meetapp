@@ -7,21 +7,20 @@ import { useTranslation } from 'react-i18next';
 
 import logo from '~/assets/logo.svg';
 import { signUpRequest } from '~/store/modules/auth/actions';
-import i18n from '~/config/i18n';
-
-const SIGN_UP_SCHEMA = Yup.object().shape({
-  name: Yup.string().required(i18n.t('error.empty.signName')),
-  email: Yup.string()
-    .email(i18n.t('error.invalid.email'))
-    .required(i18n.t('error.empty.signEmail')),
-  password: Yup.string()
-    .min(6, i18n.t('error.length.password.min'))
-    .required(i18n.t('error.empty.signPassword')),
-});
 
 function SignUp() {
   const { t } = useTranslation();
   const dispatch = useDispatch();
+
+  const SIGN_UP_SCHEMA = Yup.object().shape({
+    name: Yup.string().required(t('error.empty.signName')),
+    email: Yup.string()
+      .email(t('error.invalid.email'))
+      .required(t('error.empty.signEmail')),
+    password: Yup.string()
+      .min(6, t('error.length.password.min'))
+      .required(t('error.empty.signPassword')),
+  });
 
   function handleSubmit({ name, email, password }) {
     dispatch(signUpRequest(name, email, password));

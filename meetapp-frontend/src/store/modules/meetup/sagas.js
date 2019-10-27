@@ -11,16 +11,17 @@ import {
   cancelMeetupSuccess,
   cancelMeetupFailure,
 } from '~/store/modules/meetup/actions';
+import i18n from '~/config/i18n';
 
 export function* createMeetup({ payload }) {
   try {
     yield call(api.post, 'meetups', payload.data);
 
-    toast.success('Meetup criado com sucesso');
+    toast.success(i18n.t('message.success.meetupCreated'));
 
     yield put(createMeetupSuccess());
   } catch (err) {
-    toast.error('Erro ao criar meetup, confira os dados informados');
+    toast.error(err.response.data.error);
 
     yield put(createMeetupFailure());
   }
@@ -32,11 +33,11 @@ export function* updateMeetup({ payload }) {
   try {
     yield call(api.put, `meetups/${id}`, data);
 
-    toast.success('Meetup atualizado com sucesso');
+    toast.success(i18n.t('message.success.meetupUpdated'));
 
     yield put(updateMeetupSuccess());
   } catch (err) {
-    toast.error('Erro ao atualizar meetup, confira os dados informados');
+    toast.error(err.response.data.error);
 
     yield put(updateMeetupFailure());
   }
@@ -48,12 +49,12 @@ export function* cancelMeetup({ payload }) {
   try {
     yield call(api.delete, `meetups/${id}`);
 
-    toast.success('Meetup cancelado com sucesso');
+    toast.success(i18n.t('message.success.meetupCanceled'));
 
     yield put(cancelMeetupSuccess());
     history.push('/');
   } catch (err) {
-    toast.error('Erro ao cancelar meetup, tente novamente');
+    toast.error(err.response.data.error);
 
     yield put(cancelMeetupFailure());
   }

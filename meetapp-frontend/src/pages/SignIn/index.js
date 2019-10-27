@@ -7,20 +7,19 @@ import { useTranslation } from 'react-i18next';
 
 import logo from '~/assets/logo.svg';
 import { signInRequest } from '~/store/modules/auth/actions';
-import i18n from '~/config/i18n';
-
-const SIGN_IN_SCHEMA = Yup.object().shape({
-  email: Yup.string()
-    .email(i18n.t('error.invalid.email'))
-    .required(i18n.t('error.empty.signEmail')),
-  password: Yup.string().required(i18n.t('error.empty.signPassword')),
-});
 
 function SignIn() {
   const { t } = useTranslation();
   const dispatch = useDispatch();
 
   const loading = useSelector(state => state.auth.loading);
+
+  const SIGN_IN_SCHEMA = Yup.object().shape({
+    email: Yup.string()
+      .email(t('error.invalid.email'))
+      .required(t('error.empty.signEmail')),
+    password: Yup.string().required(t('error.empty.signPassword')),
+  });
 
   function handleSubmit({ email, password }) {
     dispatch(signInRequest(email, password));

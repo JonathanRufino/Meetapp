@@ -6,6 +6,7 @@ import {
   updateProfileSuccess,
   updateProfileFailure,
 } from '~/store/modules/user/actions';
+import i18n from '~/config/i18n';
 
 export function* updateProfile({ payload }) {
   try {
@@ -18,11 +19,11 @@ export function* updateProfile({ payload }) {
 
     const response = yield call(api.put, 'users', profile);
 
-    toast.success('Perfil atualizado com sucesso');
+    toast.success(i18n.t('message.success.profileUpdated'));
 
     yield put(updateProfileSuccess(response.data));
   } catch (err) {
-    toast.error('Erro ao atualizar perfil, confira seus dados');
+    toast.error(err.response.data.error);
 
     yield put(updateProfileFailure());
   }

@@ -8,25 +8,24 @@ import { MdAdd } from 'react-icons/md';
 import BannerInput from '~/components/BannerInput';
 import DatePicker from '~/components/DatePicker';
 import { createMeetupRequest } from '~/store/modules/meetup/actions';
-import i18n from '~/config/i18n';
 
 import { Container } from './styles';
-
-const MEETUP_SCHEMA = Yup.object().shape({
-  banner_id: Yup.number().required(i18n.t('error.empty.meetupBanner')),
-  title: Yup.string().required(i18n.t('error.empty.meetupTitle')),
-  description: Yup.string().required(i18n.t('error.empty.meetupDescription')),
-  location: Yup.string().required(i18n.t('error.empty.meetupLocation')),
-  date: Yup.date(i18n.t('error.invalid.date')).required(
-    i18n.t('error.empty.meetupDate')
-  ),
-});
 
 export default function New() {
   const { t } = useTranslation();
   const dispatch = useDispatch();
 
   const loading = useSelector(state => state.meetup.loading);
+
+  const MEETUP_SCHEMA = Yup.object().shape({
+    banner_id: Yup.number().required(t('error.empty.meetupBanner')),
+    title: Yup.string().required(t('error.empty.meetupTitle')),
+    description: Yup.string().required(t('error.empty.meetupDescription')),
+    location: Yup.string().required(t('error.empty.meetupLocation')),
+    date: Yup.date(t('error.invalid.date')).required(
+      t('error.empty.meetupDate')
+    ),
+  });
 
   function handleSubmit(data) {
     dispatch(createMeetupRequest(data));

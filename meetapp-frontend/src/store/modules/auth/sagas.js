@@ -3,6 +3,7 @@ import { toast } from 'react-toastify';
 
 import api from '~/services/api';
 import history from '~/services/history';
+import i18n from '~/config/i18n';
 
 import { signInSuccess, signFailure } from './actions';
 
@@ -24,6 +25,7 @@ export function* signIn({ payload }) {
     history.push('/dashboard');
   } catch (err) {
     toast.error(err.response.data.error);
+
     yield put(signFailure());
   }
 }
@@ -38,9 +40,10 @@ export function* signUp({ payload }) {
       password,
     });
 
+    toast.success(i18n.t('message.success.signUp'));
     history.push('/');
   } catch (err) {
-    toast.error('Falha no cadastro, verifique seus dados!');
+    toast.error(err.response.data.error);
 
     yield put(signFailure());
   }

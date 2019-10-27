@@ -63,5 +63,14 @@
         "min": "No mínimo 6 caracteres"
       }
     }
+  },
+  "message": {
+    "success": {
+      "signUp": "Usuário cadastrado com sucessooooooooo.",
+      "meetupCreated": "Meetup criado com sucesso.",
+      "meetupUpdated": "Meetup atualizado com sucesso.",
+      "meetupCanceled": "Meetup cancelado com sucesso",
+      "profileUpdated": "Perfil atualizado com sucesso"
+    }
   }
 }
