@@ -20,6 +20,7 @@ export function* createMeetup({ payload }) {
     toast.success(i18n.t('message.success.meetupCreated'));
 
     yield put(createMeetupSuccess());
+    history.push('/');
   } catch (err) {
     toast.error(err.response.data.error);
 
@@ -36,6 +37,7 @@ export function* updateMeetup({ payload }) {
     toast.success(i18n.t('message.success.meetupUpdated'));
 
     yield put(updateMeetupSuccess());
+    history.push('/');
   } catch (err) {
     toast.error(err.response.data.error);
 
