@@ -5,7 +5,10 @@
     "cancelSubscription": "Cancelar inscrição",
     "saveProfile": "Salvar perfil",
     "signOut": "Sair do Meetapp",
-    "subscribe": "Realizar inscrição"
+    "subscribe": "Realizar inscrição",
+    "next": "Próximo",
+    "done": "Pronto",
+    "skip": "Pular"
   },
   "link": {
     "createAccount": "Criar conta grátis",

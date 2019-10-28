@@ -11,6 +11,7 @@ import MIcon from 'react-native-vector-icons/MaterialIcons';
 import logo from './assets/images/logo/logo.png';
 import i18n from './i18n';
 
+import Onboard from './pages/Onboard';
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
 
@@ -76,14 +77,20 @@ const ProfileStack = createStackNavigator(
   }
 );
 
-const createRouter = (isSigned = false) =>
+const createRouter = (isSigned = false, firstOpen = true) =>
   createAppContainer(
     createSwitchNavigator(
       {
-        Sign: createSwitchNavigator({
-          SignIn,
-          SignUp,
-        }),
+        Sign: createSwitchNavigator(
+          {
+            Onboard,
+            SignIn,
+            SignUp,
+          },
+          {
+            initialRouteName: firstOpen ? 'Onboard' : 'SignIn',
+          }
+        ),
         App: createBottomTabNavigator(
           {
             MeetupsStack,
