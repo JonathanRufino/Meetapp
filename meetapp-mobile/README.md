@@ -27,7 +27,9 @@ yarn
   react-native run-ios
   ```
 
-> Note: If you are running on a physical android device, change the api baseUrl to your machine ip
+> Note 1: This application was tested only on Android
+
+> Note 2: If you are running on a physical android device, change the api baseUrl to your machine ip
 
 ## Run tests
 
