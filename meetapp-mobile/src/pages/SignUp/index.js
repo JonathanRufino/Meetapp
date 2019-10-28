@@ -27,8 +27,12 @@ function SignIn({ navigation }) {
 
   const loading = useSelector(state => state.auth.loading);
 
+  function onSignUpSucess() {
+    navigation.goBack();
+  }
+
   function handleSubmit() {
-    dispatch(signUpRequest(name, email, password));
+    dispatch(signUpRequest(name, email, password, onSignUpSucess));
   }
 
   return (
@@ -89,6 +93,7 @@ function SignIn({ navigation }) {
 SignIn.propTypes = {
   navigation: PropTypes.shape({
     navigate: PropTypes.func,
+    goBack: PropTypes.func,
   }).isRequired,
 };
 

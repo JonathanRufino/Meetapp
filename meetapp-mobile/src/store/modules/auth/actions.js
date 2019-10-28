@@ -20,10 +20,10 @@ export function signFailure() {
   };
 }
 
-export function signUpRequest(name, email, password) {
+export function signUpRequest(name, email, password, onSuccess) {
   return {
     type: AuthTypes.SIGN_UP_REQUEST,
-    payload: { name, email, password },
+    payload: { name, email, password, onSuccess },
   };
 }
 

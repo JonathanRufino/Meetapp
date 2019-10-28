@@ -21,8 +21,6 @@ export function* signIn({ payload }) {
     api.defaults.headers.Authorization = `Bearer ${token}`;
 
     yield put(signInSuccess(token, user));
-
-    // history.push('/dashboard');
   } catch (err) {
     Alert.alert(i18n.t('error.signIn'), err.response.data.error);
     yield put(signFailure());
@@ -31,7 +29,7 @@ export function* signIn({ payload }) {
 
 export function* signUp({ payload }) {
   try {
-    const { name, email, password } = payload;
+    const { name, email, password, onSuccess } = payload;
 
     yield call(api.post, 'users', {
       name,
@@ -41,7 +39,7 @@ export function* signUp({ payload }) {
 
     yield put(signUpSuccess());
 
-    // history.push('/');
+    onSuccess();
   } catch (err) {
     Alert.alert(i18n.t('error.signUp'), err.response.data.error);
 
