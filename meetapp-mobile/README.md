@@ -13,9 +13,21 @@ yarn
 
 ## Usage
 
-```sh
-react-native run-android
-```
+- Start metro bundler
+
+  ```sh
+  yarn start
+  ```
+
+- Then run
+
+  ```sh
+  react-native run-android
+  or
+  react-native run-ios
+  ```
+
+> Note: If you are running on a physical android device, change the api baseUrl to your machine ip
 
 ## Run tests
 
